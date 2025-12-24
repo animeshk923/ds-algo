@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* Base Options */
+    "target": "esnext", // Compile to modern JavaScript
+    "module": "commonjs", // Use CommonJS for ts-node compatibility
+    "moduleResolution": "node", // How to resolve module paths
+    "lib": ["esnext"], // Standard libraries to include
+    "outDir": "./dist", // Where to output compiled JavaScript
+    "rootDir": "./src", // Where your source code lives
+    "esModuleInterop": true, // Allows for better CJS/ESM interop
+    "skipLibCheck": true, // Speeds up compilation by skipping .d.ts checks
+
+    /* Strictness */
+    "strict": true, // Enables all strict type-checking options
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src", "tsconfig.json"], // Only compile files in the 'src' directory
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "esm": false,
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
+}
